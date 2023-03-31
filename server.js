@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 app.set('port', port);
 
 server.listen(3000, '192.168.56.1' || 'localhost', function() {
-    console.log('Aplicación de NodeJS  - Proceso: ' + process.pid + ' Iniciada...');
-    console.log('Aplicación de NodeJS - Puerto: ' + port + ' Iniciada...');
+    console.log('Aplicación de NodeJS Iniciada...');
+    console.log('Aplicación de NodeJS  - Proceso: ' + process.pid);
+    console.log('Aplicación de NodeJS - Puerto: ' + port);
 });
