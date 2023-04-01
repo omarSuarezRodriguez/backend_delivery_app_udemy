@@ -16,7 +16,7 @@ app.use(express.urlencoded({
 app.use(cors());
 
 app.disable('x-powered-by');
-
+//sd
 app.set('port', port);
 
 server.listen(3000, '192.168.56.1' || 'localhost', function() {
