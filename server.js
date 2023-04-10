@@ -6,6 +6,11 @@ const logger = require('morgan');
 const cors = require('cors');
 
 
+/*
+* Importar Rutas
+*/
+const usersRoutes = require('./routes/userRoutes');
+
 const port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
@@ -16,8 +21,15 @@ app.use(express.urlencoded({
 app.use(cors());
 
 app.disable('x-powered-by');
-//sd
+
 app.set('port', port);
+
+
+/*
+* Llamado de las rutas
+*/
+usersRoutes(app);
+
 
 server.listen(3000, '192.168.56.1' || 'localhost', function() {
     console.log('Aplicación de NodeJS Iniciada...');
